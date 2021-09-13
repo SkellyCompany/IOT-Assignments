@@ -8,12 +8,13 @@ import { MqttController } from './mqtt.controller';
   imports: [
     ClientsModule.register([
       {
-        name: 'MQTT_CLIENT',
+        name: 'MQTT_START',
         transport: Transport.MQTT,
         options: {
-          host: 'mqtts://a8abef4e9bd641b69b6ea2c4de9f512f.s1.eu.hivemq.cloud:8883',
-          username: 'skelly',
-          password: 'SKELLYskelly11!'
+          url: 'mqtts://a8abef4e9bd641b69b6ea2c4de9f512f.s1.eu.hivemq.cloud',
+          port: 8883,
+          username: 'admin',
+          password: 'SKELLYskelly69!'
         },
       },
     ]),
@@ -21,4 +22,4 @@ import { MqttController } from './mqtt.controller';
   controllers: [AppController, MqttController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
